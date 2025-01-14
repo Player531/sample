@@ -84,7 +84,8 @@ graph = {}
 # graphlist = [[1,2],[1,5],[2,5],[2,3],[5,3],[5,4],[3,4]]
 # graphlist = [[1,2],[1,7],[2,3],[2,6],[3,4],[3,5],[3,4],[7,8],[7,10],[8,9]]
 # graphlist = [[2,1],[2,4],[4,1],[1,5],[1,3]]
-graphlist = [ [0, 1], [1, 2], [0, 3], [3, 4], [4, 7], [3, 7], [6, 7], [4, 5], [4, 6], [5, 6] ]
+# graphlist = [ [0, 1], [1, 2], [0, 3], [3, 4], [4, 7], [3, 7], [6, 7], [4, 5], [4, 6], [5, 6] ]
+graphlist = [[1,0],[1,2], [3,4]]
 
 for edge in graphlist:
     a, b = edge
@@ -97,10 +98,10 @@ for edge in graphlist:
 print(graph)
 visited = dict.fromkeys(list(graph), False)
 print(visited)
-bfs(graph, 2, 6)
+# bfs(graph, 2, 6)
 # dfsTraversal = []
 # dfs(graph, 2,visited, dfsTraversal)
 # print(f"DFS Traversal: {dfsTraversal}")
 
-# components = connectedComponents(graph)
-# print(f"Graph has: {components} components")
+components = connectedComponents(graph)
+print(f"Graph has: {components} components")
